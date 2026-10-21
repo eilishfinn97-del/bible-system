@@ -1,0 +1,198 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    color: #263650;
+    line-height: 1.7;
+}
+
+.navbar {
+    background: white;
+    padding: 16px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 12px #152d4b10;
+}
+
+.navbar h2 {
+    color: #2455a4;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #34445a;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #2455a4;
+}
+
+.hero {
+    text-align: center;
+    padding: 75px 20px;
+    background: linear-gradient(135deg, #e7efff, #ffffff);
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    color: #173e7b;
+}
+
+.hero p {
+    max-width: 550px;
+    margin: 16px auto;
+}
+
+.subtitle {
+    color: #527cc0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    background: #2455a4;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #173e7b;
+}
+
+.daily-card {
+    max-width: 850px;
+    margin: -20px auto 30px;
+    width: calc(100% - 36px);
+    background: #2455a4;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px #193c701f;
+}
+
+.daily-card .subtitle {
+    color: #d7e5ff;
+}
+
+.daily-card h2 {
+    font-size: 25px;
+}
+
+.light-button {
+    background: white;
+    color: #2455a4;
+}
+
+.light-button:hover {
+    background: #e7efff;
+}
+
+.section {
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 0 20px;
+}
+
+.section h2 {
+    color: #173e7b;
+}
+
+#searchForm {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #cbd6e7;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 2px solid #7ba5e8;
+}
+
+.result-card,
+.favorite-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 18px;
+    border: 1px solid #e0e8f3;
+    overflow-wrap: anywhere;
+}
+
+.verse {
+    margin: 12px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #edf1f7;
+}
+
+.verse strong {
+    color: #2455a4;
+    margin-right: 8px;
+}
+
+.favorite-card button {
+    margin: 8px 6px 0 0;
+}
+
+#status {
+    color: #52637b;
+}
+
+footer {
+    background: #173e7b;
+    color: white;
+    padding: 22px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    #searchForm {
+        flex-direction: column;
+    }
+
+    #searchForm button {
+        width: 100%;
+    }
+
+    .daily-card {
+        padding: 22px;
+    }
+}

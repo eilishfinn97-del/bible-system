@@ -1,0 +1,80 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaithVerse | Bible System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>✝ FaithVerse</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#reader">Bible Reader</a>
+            <a href="#favorites">Favorites</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <p class="subtitle">YOUR DAILY WORD</p>
+            <h1>Grow in Faith,<br>One Verse at a Time.</h1>
+            <p>Read the Bible, discover Scripture, and keep
+               your favorite verses in one place.</p>
+            <button onclick="getRandomVerse()">
+                Discover a Verse
+            </button>
+        </section>
+
+        <section class="daily-card">
+            <p class="subtitle">VERSE IN FOCUS</p>
+            <h2 id="dailyReference">John 3:16</h2>
+            <p id="dailyVerse">Loading Bible verse...</p>
+            <button class="light-button"
+                    onclick="searchVerse('John 3:16')">
+                Read This Verse
+            </button>
+        </section>
+
+        <section class="section" id="reader">
+            <h2>Bible Reader</h2>
+            <p>Enter a book, chapter, or verse reference.</p>
+
+            <form id="searchForm">
+                <input
+                    type="text"
+                    id="referenceInput"
+                    placeholder="Example: John 3:16 or Psalm 23"
+                    required
+                >
+                <button type="submit">Search</button>
+            </form>
+
+            <p id="status" role="status"></p>
+
+            <article id="result" class="result-card"
+                     aria-live="polite">
+                <h3>Your Bible passage will appear here.</h3>
+            </article>
+        </section>
+
+        <section class="section" id="favorites">
+            <h2>My Favorite Verses ♡</h2>
+            <p>Your saved verses are stored in this browser.</p>
+            <div id="favoriteList"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>FaithVerse Bible System | Scripture for everyday life</p>
+        <p>Verse text provided by bible-api.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
